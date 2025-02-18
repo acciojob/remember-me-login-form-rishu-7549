@@ -17,19 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const password = document.getElementById('password').value;
                 const rememberMe = document.getElementById('checkbox').checked;
 
-                if (!username) {
-                    document.getElementById('usernameError').textContent = 'Username is required.';
-                } else {
-                    document.getElementById('usernameError').textContent = '';
-                }
-
-                if (!password) {
-                    document.getElementById('passwordError').textContent = 'Password is required.';
-                } else {
-                    document.getElementById('passwordError').textContent = '';
-                }
-
-                if (username && password) {
+				if (username && password) {
                     alert(`Logged in as ${username}`);
                     if (rememberMe) {
                         localStorage.setItem('username', username);
